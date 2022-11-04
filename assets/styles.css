@@ -33,6 +33,26 @@
         text-shadow: 1px 2px 2px #000;
     }
     
+    header .mobileMenu {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    header .mobileMenu-bar {
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+    
+    header .mobileMenu:hover .mobileMenu-bar {
+        background-color: #ea728c;
+        transition: all ease .3s;
+    }
+    
     header nav ul {
         display: flex;
         list-style: none;
@@ -101,7 +121,7 @@
     }
     
     .quickInfo {
-        margin-bottom: 500px;
+        margin-bottom: 50px;
     }
     
     .quickInfoContent {
@@ -111,9 +131,9 @@
         background-color: #fff;
         box-shadow: 3px 2px 8px #000;
         border-radius: 5px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
+        padding: 12px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
     
     .quickInfo-Item {
@@ -157,4 +177,82 @@
         color: #ea728c;
         font-weight: 600;
         margin-top: 10px;
+    }
+    
+    #aboutUs {
+        height: 50vh;
+        margin-bottom: 300px;
+    }
+    
+    .aboutUsContent {
+        height: 50vh;
+        display: flex;
+    }
+    
+    .leftContent {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .leftContent h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .leftContent p {
+        display: block;
+        margin-bottom: 30px;
+    }
+    
+    .leftContent .socialMidiaContainer {
+        display: flex;
+    }
+    
+    .socialMidiaIcon {
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        background-color: #ea728c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+    
+    .socialMidiaIcon img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .rightContent {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .rightContent .imageVertical {
+        background-color: #ccc;
+        width: 100%;
+        height: 340px;
+        box-shadow: 5px 2px 12px #111;
+    }
+    
+    .rightContent .imageVertical:nth-child(1) {
+        background-image: url('./images/bg-profile.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .rightContent .imageVertical:nth-child(2) {
+        background-image: url('./images/bg-place.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 15px;
+        margin-bottom: 50px;
     }
