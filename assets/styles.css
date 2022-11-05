@@ -105,7 +105,7 @@
         display: block;
     }
     
-    .introContent a {
+    .button {
         display: block;
         padding: 15px;
         margin-top: 25px;
@@ -181,7 +181,7 @@
     
     #aboutUs {
         height: 50vh;
-        margin-bottom: 300px;
+        margin-bottom: 100px;
     }
     
     .aboutUsContent {
@@ -255,6 +255,80 @@
         background-repeat: no-repeat;
         margin-left: 15px;
         margin-bottom: 50px;
+    }
+    
+    .sectionTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        font-size: 2rem;
+    }
+    
+    .sectionTitleLine {
+        border-bottom: 1px solid #ea728c;
+        width: 10%;
+        height: 2px;
+        margin-top: 10px;
+    }
+    
+    #services {
+        padding-top: 50px;
+        margin-bottom: 200px;
+    }
+    
+    .servicesContent {}
+    
+    .servicesContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .serviceItem {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    
+    .serviceItemText {
+        flex: 1;
+        padding: 20px;
+        line-height: 1.3rem;
+    }
+    
+    .arrow-house:after {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        content: "";
+        margin-left: -12px;
+        margin-top: 90px;
+        rotate: 130deg;
+        border-left: #fff solid;
+        background-color: #fff;
+        border-top: #fff solid;
+    }
+    
+    .serviceItemText h3 {
+        margin-bottom: 15px;
+    }
+    
+    .serviceItemText .button {
+        padding: 10px;
+    }
+    
+    .serviceItemImage {
+        flex: 1;
+    }
+    
+    .serviceItemImage img {
+        width: 100%;
+    }
+    
+    .arrow-house {
+        width: 1px;
+        height: 100%;
     }
     
     @media (max-width:1000px) {
