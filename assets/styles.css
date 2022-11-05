@@ -3,6 +3,7 @@
         margin: 0;
         box-sizing: border-box;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        scroll-behavior: smooth;
     }
     
     .container {
@@ -11,6 +12,51 @@
         margin: auto;
         padding: 5px 15px;
         z-index: 2;
+    }
+    
+    .mobileMenuContent {
+        position: fixed;
+        transition: all ease .5s;
+        z-index: 100;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .mobileMenuContent .btn-Close {
+        width: 100%;
+        padding: 15px;
+        background-color: #ea728c;
+        color: #fff;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .mobileMenuContent ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .mobileMenuContent ul li {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mobileMenuContent ul li a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: none;
     }
     
     .cover {
@@ -34,9 +80,9 @@
     }
     
     header .mobileMenu {
-        width: 38px;
-        height: 38px;
-        display: flex;
+        width: 32px;
+        height: 32px;
+        display: none;
         flex-direction: column;
         justify-content: space-around;
     }
@@ -101,6 +147,8 @@
     }
     
     .introContent span {
+        margin-top: 20px;
+        line-height: 30px;
         font-size: 1.3rem;
         display: block;
     }
@@ -118,6 +166,11 @@
         font-weight: bold;
         color: #fff;
         background-color: #ea728c;
+    }
+    
+    .button:hover {
+        opacity: .8;
+        transition: all ease .3s;
     }
     
     .quickInfo {
@@ -180,12 +233,10 @@
     }
     
     #aboutUs {
-        height: 50vh;
-        margin-bottom: 100px;
+        margin: 100px 0;
     }
     
     .aboutUsContent {
-        height: 50vh;
         display: flex;
     }
     
@@ -336,5 +387,48 @@
             grid-template-columns: repeat(2, 1fr);
             height: 260px;
             margin-top: -130px;
+        }
+    }
+    
+    @media (max-width:768px) {
+        header {
+            padding: 10px;
+        }
+        header .mobileMenu {
+            display: flex;
+        }
+        header nav {
+            display: none;
+        }
+    }
+    
+    @media (max-width:700px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        .introContent h1 {
+            font-size: 2.4rem;
+        }
+        .quickInfoContent {
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+            margin-top: 10px
+        }
+        .quickInfo_Item-text {
+            flex: 1;
+        }
+        .quickInfo_Item-text span {
+            font-size: .80rem;
+        }
+        .aboutUsContent {
+            flex-direction: column;
+        }
+        .rightContent .imageVertical:nth-child(2) {
+            margin-left: 5px;
+            border-radius: 5px;
+            margin-bottom: 0;
+        }
+        .servicesContainer {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
